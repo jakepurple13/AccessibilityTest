@@ -2,12 +2,10 @@ package com.programmersbox.accessibilitytest
 
 import android.accessibilityservice.AccessibilityService
 import android.accessibilityservice.AccessibilityServiceInfo
-import android.content.ComponentName
 import android.content.Context
-import android.content.Intent
 import android.content.pm.ServiceInfo
+import android.os.Build
 import android.os.Bundle
-import android.util.Log
 import android.view.accessibility.AccessibilityManager
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -43,6 +41,15 @@ class MainActivity : ComponentActivity() {
                             .fillMaxSize()
                     ) {
                         Text("Accessibility services enabled: $enabled")
+
+                        Text("Host: " + Build.HOST)
+                        Text("Device: " + Build.DEVICE)
+                        Text("Model: " + Build.MODEL)
+                        Text("Brand: " + Build.BRAND)
+                        Text("Product: " + Build.PRODUCT)
+                        Text("Hardware: " + Build.HARDWARE)
+                        Text("Manufacturer: " + Build.MANUFACTURER)
+                        Text("ID: " + Build.ID)
 
                         Button(
                             onClick = {  },
