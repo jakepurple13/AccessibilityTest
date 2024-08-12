@@ -21,6 +21,7 @@ class GlobalActionBarService : AccessibilityService() {
 
         printStuff(event)
         printStuff("packageName: " + event.packageName)
+        printStuff("className: " + event.className)
         printStuff("Source: " + event.source)
         printStuff("Source text: " + event.source?.text)
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
